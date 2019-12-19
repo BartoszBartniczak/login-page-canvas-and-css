@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext");
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #333333;
 }
@@ -10,17 +10,14 @@ a {
   text-decoration: none;
   font-weight: 600;
   color: #d600c4;
-  -webkit-transition: color 200ms;
   transition: color 200ms;
 }
-
 a:hover {
   color: #5dd6ff;
 }
 
 .header {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffd6fc), color-stop(99%, #ecfaff), to(#ecfaff));
   background-image: linear-gradient(to top, #ffd6fc 0%, #ecfaff 99%, #ecfaff 100%);
   overflow: hidden;
 }
@@ -29,20 +26,20 @@ a:hover {
   border: none;
   font-size: 1.2rem;
   padding: 0 6vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   line-height: 2.5;
   margin-top: 6vh;
   outline: transparent;
-  background-image: -webkit-gradient(linear, left top, right top, from(#5dd6ff), color-stop(99%, #d600c4), to(#d600c4));
   background-image: linear-gradient(to right, #5dd6ff 0%, #d600c4 99%, #d600c4 100%);
   color: white;
   border-radius: 50px;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 5px 10px rgba(214, 0, 196, 0.2);
-          box-shadow: 0 5px 10px rgba(214, 0, 196, 0.2);
+  box-shadow: 0 5px 10px rgba(214, 0, 196, 0.2);
+  transition: transform 200ms;
 }
-
+.button:hover {
+  transform: scale(1.1, 1.1);
+}
 .button--block {
   display: block;
   width: 100%;
@@ -52,66 +49,53 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: white;
   width: 400px;
   text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 11vh 5vh 7vh;
   border-radius: 10px;
-  -webkit-box-shadow: 0 25px 35px rgba(93, 214, 255, 0.15);
-          box-shadow: 0 25px 35px rgba(93, 214, 255, 0.15);
+  box-shadow: 0 25px 35px rgba(93, 214, 255, 0.15);
 }
-
 .login-box .avatar {
   display: inline-block;
   width: 15vh;
   height: 15vh;
   background-color: #333333;
   border-radius: 50%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: .75vh;
+  box-sizing: border-box;
+  padding: 0.75vh;
   border: 4px solid white;
-  -webkit-box-shadow: 0 5px 10px rgba(93, 214, 255, 0.2);
-          box-shadow: 0 5px 10px rgba(93, 214, 255, 0.2);
+  box-shadow: 0 5px 10px rgba(93, 214, 255, 0.2);
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .login-box .avatar svg {
   height: 100%;
 }
-
 .login-box .avatar svg path {
   fill: white;
 }
-
 .login-box h2 {
   font-size: 1.4rem;
   color: #4d4d4d;
   margin: 0 0 0 0.9vh;
 }
-
 .login-box p {
   margin: 0 0 3vh;
   font-size: 0.8rem;
   color: #999999;
 }
-
 .login-box .form--input-box {
   position: relative;
   text-align: left;
   margin: 0 0 3vh;
 }
-
 .login-box .form--input-box::after, .login-box .form--input-box::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -119,16 +103,12 @@ a:hover {
   height: 2px;
   background: rgba(0, 0, 0, 0.1);
 }
-
 .login-box .form--input-box::before {
-  background-image: -webkit-gradient(linear, left top, right top, from(#5dd6ff), color-stop(99%, #d600c4), to(#d600c4));
   background-image: linear-gradient(to right, #5dd6ff 0%, #d600c4 99%, #d600c4 100%);
   right: 100%;
   z-index: 2;
-  -webkit-transition: right 200ms;
   transition: right 200ms;
 }
-
 .login-box .form--input-box input {
   width: 100%;
   border: none;
@@ -138,40 +118,32 @@ a:hover {
   outline: transparent;
   margin-top: 2vh;
 }
-
 .login-box .form--input-box label {
   position: absolute;
   top: 23px;
   font-size: 1rem;
   cursor: pointer;
-  -webkit-transition: top 200ms, font-size 200ms;
   transition: top 200ms, font-size 200ms;
 }
-
 .login-box .form--input-box.focused::before {
   right: 0;
 }
-
 .login-box .form--input-box.focused:not(.active) label {
   top: 0;
   font-size: 0.7rem;
 }
-
 .login-box .form--input-box.active label {
   top: 0;
   font-size: 0.7rem;
 }
-
 .login-box .form--options {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1.5fr;
-      grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
   font-size: 0.7rem;
   text-align: left;
 }
-
 .login-box .form--options > div:last-of-type {
   text-align: right;
 }
+
 /*# sourceMappingURL=styles.css.map */

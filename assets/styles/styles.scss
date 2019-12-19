@@ -12,7 +12,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: $color-font;
-
 }
 
 a {
@@ -47,11 +46,19 @@ a {
     text-transform: uppercase;
     box-shadow: 0 5px 10px rgba($color-primary, 0.2);
 
+    transition: transform 200ms;
+
+    &:hover{
+        transform: scale(1.1, 1.1)
+    }
+
     &--block{
         display: block;
         width: 100%;
     }
+
 }
+
 
 .login-box {
     position: absolute;
